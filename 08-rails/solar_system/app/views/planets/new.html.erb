@@ -1,0 +1,41 @@
+<h1>New planet</h1>
+
+<form action="<%= planets_path %>" method='post'>
+  <label>
+    Name:
+    <input name="name" required>
+  </label>
+
+  <label>
+    Image:
+    <input type="url" name="image">
+  </label>
+
+  <label>
+    Orbit:
+    <input type='number' name="orbit" >
+  </label>
+
+  <label>
+    Diameter:
+    <input name="diameter" type="number">
+  </label>
+
+  <label>
+    Mass:
+    <input name="mass" type="number">
+  </label>
+
+  <label>
+    Distance from Earth:
+    <input name="distance_from_earth" type="number">
+  </label>
+
+  <label>
+    Moons:
+    <input name="moons" type="number">
+  </label>
+
+  <button>Create new planet</button>
+
+</form>

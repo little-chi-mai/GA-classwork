@@ -1,0 +1,11 @@
+<ul>
+  <% @numbers.each do |n| %>
+    <li style="background-color: <%= cycle 'aliceblue', 'pink', 'yello' %>;"><%= n %></li>
+  <% end %>
+</ul>
+
+
+<p>You have <%= @friend_count %> friends.</p>
+<p>You have <%= @enemy_count %> enemies.</p>
+
+<p><%= @story %></p>

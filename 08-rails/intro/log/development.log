@@ -949,3 +949,17 @@ Processing by PagesController#hello as HTML
 Completed 200 OK in 66ms (Views: 58.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2021-01-18 21:48:29 +1100
+Processing by PagesController#hello as HTML
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 492ms (Views: 487.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-01-18 21:48:39 +1100
+Processing by PagesController#hello as HTML
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+

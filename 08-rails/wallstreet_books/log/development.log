@@ -1527,3 +1527,248 @@ Processing by BooksController#result as HTML
 Completed 200 OK in 838ms (Views: 31.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2021-01-18 21:49:40 +1100
+Processing by PagesController#hello as HTML
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 83ms (Views: 79.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books" for ::1 at 2021-01-18 21:49:42 +1100
+Processing by BooksController#form as HTML
+  Rendering books/form.html.erb within layouts/application
+  Rendered books/form.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 49ms (Views: 47.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books/result?book_name=Harry+Potter" for ::1 at 2021-01-18 21:50:00 +1100
+Processing by BooksController#result as HTML
+  Parameters: {"book_name"=>"Harry Potter"}
+  Rendering books/result.html.erb within layouts/application
+  Rendered books/result.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 1236ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books" for ::1 at 2021-01-18 21:50:14 +1100
+Processing by BooksController#form as HTML
+  Rendering books/form.html.erb within layouts/application
+  Rendered books/form.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books/result?book_name=Jaws" for ::1 at 2021-01-18 21:51:51 +1100
+Processing by BooksController#result as HTML
+  Parameters: {"book_name"=>"Jaws"}
+  Rendering books/result.html.erb within layouts/application
+  Rendered books/result.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 1037ms (Views: 24.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-01-18 21:54:46 +1100
+Processing by PagesController#hello as HTML
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stocks" for ::1 at 2021-01-18 21:54:48 +1100
+Processing by StocksController#form as HTML
+  Rendering stocks/form.html.erb within layouts/application
+  Rendered stocks/form.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stocks/result?stock_symbol=goog" for ::1 at 2021-01-18 21:54:51 +1100
+Processing by StocksController#result as HTML
+  Parameters: {"stock_symbol"=>"goog"}
+  Rendering stocks/result.html.erb within layouts/application
+  Rendered stocks/result.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stocks/result?stock_symbol=goog" for ::1 at 2021-01-18 21:56:20 +1100
+Processing by StocksController#result as HTML
+  Parameters: {"stock_symbol"=>"goog"}
+  Rendering stocks/result.html.erb within layouts/application
+  Rendered stocks/result.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 900ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stocks/result?stock_symbol=goog" for ::1 at 2021-01-18 21:56:57 +1100
+Processing by StocksController#result as HTML
+  Parameters: {"stock_symbol"=>"goog"}
+  Rendering stocks/result.html.erb within layouts/application
+  Rendered stocks/result.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 1284ms (Views: 25.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stocks/result?stock_symbol=goog" for ::1 at 2021-01-18 21:57:56 +1100
+Processing by StocksController#result as HTML
+  Parameters: {"stock_symbol"=>"goog"}
+  Rendering stocks/result.html.erb within layouts/application
+  Rendered stocks/result.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 1299ms (Views: 33.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stocks" for ::1 at 2021-01-18 21:58:05 +1100
+Processing by StocksController#form as HTML
+  Rendering stocks/form.html.erb within layouts/application
+  Rendered stocks/form.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stocks/result?stock_symbol=goog" for ::1 at 2021-01-18 21:58:08 +1100
+Processing by StocksController#result as HTML
+  Parameters: {"stock_symbol"=>"goog"}
+  Rendering stocks/result.html.erb within layouts/application
+  Rendered stocks/result.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 1311ms (Views: 29.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stocks/result?stock_symbol=AAPL" for ::1 at 2021-01-18 21:58:26 +1100
+Processing by StocksController#result as HTML
+  Parameters: {"stock_symbol"=>"AAPL"}
+  Rendering stocks/result.html.erb within layouts/application
+  Rendered stocks/result.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 1078ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-01-18 21:59:41 +1100
+Processing by PagesController#hello as HTML
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stocks" for ::1 at 2021-01-18 22:00:01 +1100
+Processing by StocksController#form as HTML
+  Rendering stocks/form.html.erb within layouts/application
+  Rendered stocks/form.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stocks/result?stock_symbol=AAPL" for ::1 at 2021-01-18 22:00:05 +1100
+Processing by StocksController#result as HTML
+  Parameters: {"stock_symbol"=>"AAPL"}
+Completed 500 Internal Server Error in 1096ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (Hey):
+  
+app/controllers/stocks_controller.rb:10:in `result'
+Started PUT "/__web_console/repl_sessions/e846d2765cc333d40385c5f2c03c3939" for ::1 at 2021-01-18 22:00:12 +1100
+Started PUT "/__web_console/repl_sessions/e846d2765cc333d40385c5f2c03c3939" for ::1 at 2021-01-18 22:00:12 +1100
+Started PUT "/__web_console/repl_sessions/e846d2765cc333d40385c5f2c03c3939" for ::1 at 2021-01-18 22:00:28 +1100
+Started PUT "/__web_console/repl_sessions/e846d2765cc333d40385c5f2c03c3939" for ::1 at 2021-01-18 22:00:41 +1100
+Started PUT "/__web_console/repl_sessions/e846d2765cc333d40385c5f2c03c3939" for ::1 at 2021-01-18 22:00:42 +1100
+Started PUT "/__web_console/repl_sessions/e846d2765cc333d40385c5f2c03c3939" for ::1 at 2021-01-18 22:01:43 +1100
+Started PUT "/__web_console/repl_sessions/e846d2765cc333d40385c5f2c03c3939" for ::1 at 2021-01-18 22:01:50 +1100
+Started PUT "/__web_console/repl_sessions/e846d2765cc333d40385c5f2c03c3939" for ::1 at 2021-01-18 22:01:55 +1100
+Started PUT "/__web_console/repl_sessions/e846d2765cc333d40385c5f2c03c3939" for ::1 at 2021-01-18 22:02:10 +1100
+Started PUT "/__web_console/repl_sessions/e846d2765cc333d40385c5f2c03c3939" for ::1 at 2021-01-18 22:02:16 +1100
+Started PUT "/__web_console/repl_sessions/e846d2765cc333d40385c5f2c03c3939" for ::1 at 2021-01-18 22:03:20 +1100
+Started GET "/stocks/result?stock_symbol=AAPL" for ::1 at 2021-01-18 22:03:48 +1100
+Processing by StocksController#result as HTML
+  Parameters: {"stock_symbol"=>"AAPL"}
+  Rendering stocks/result.html.erb within layouts/application
+  Rendered stocks/result.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 867ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stocks/result?stock_symbol=AAPL" for ::1 at 2021-01-18 22:05:08 +1100
+Processing by StocksController#result as HTML
+  Parameters: {"stock_symbol"=>"AAPL"}
+  Rendering stocks/result.html.erb within layouts/application
+  Rendered stocks/result.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 877ms (Views: 24.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books" for ::1 at 2021-01-18 22:05:11 +1100
+Processing by BooksController#form as HTML
+  Rendering books/form.html.erb within layouts/application
+  Rendered books/form.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stocks" for ::1 at 2021-01-18 22:05:13 +1100
+Processing by StocksController#form as HTML
+  Rendering stocks/form.html.erb within layouts/application
+  Rendered stocks/form.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 22ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books" for ::1 at 2021-01-18 22:05:14 +1100
+Processing by BooksController#form as HTML
+  Rendering books/form.html.erb within layouts/application
+  Rendered books/form.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books/result?book_name=Ul" for ::1 at 2021-01-18 22:05:21 +1100
+Processing by BooksController#result as HTML
+  Parameters: {"book_name"=>"Ul"}
+  Rendering books/result.html.erb within layouts/application
+  Rendered books/result.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 910ms (Views: 31.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-01-18 22:05:27 +1100
+Processing by PagesController#hello as HTML
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-01-19 10:11:04 +1100
+Processing by PagesController#hello as HTML
+  Rendering pages/hello.html.erb within layouts/application
+  Rendered pages/hello.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 134ms (Views: 130.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books" for ::1 at 2021-01-19 10:11:06 +1100
+Processing by BooksController#form as HTML
+  Rendering books/form.html.erb within layouts/application
+  Rendered books/form.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 53ms (Views: 49.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books/result?book_name=Harry+Potter" for ::1 at 2021-01-19 10:11:09 +1100
+Processing by BooksController#result as HTML
+  Parameters: {"book_name"=>"Harry Potter"}
+  Rendering books/result.html.erb within layouts/application
+  Rendered books/result.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 1204ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books" for ::1 at 2021-01-19 10:11:12 +1100
+Processing by BooksController#form as HTML
+  Rendering books/form.html.erb within layouts/application
+  Rendered books/form.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books/result?book_name=jaws" for ::1 at 2021-01-19 10:11:18 +1100
+Processing by BooksController#result as HTML
+  Parameters: {"book_name"=>"jaws"}
+  Rendering books/result.html.erb within layouts/application
+  Rendered books/result.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 798ms (Views: 28.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stocks" for ::1 at 2021-01-19 10:11:23 +1100
+Processing by StocksController#form as HTML
+  Rendering stocks/form.html.erb within layouts/application
+  Rendered stocks/form.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stocks/result?stock_symbol=goog" for ::1 at 2021-01-19 10:11:53 +1100
+Processing by StocksController#result as HTML
+  Parameters: {"stock_symbol"=>"goog"}
+  Rendering stocks/result.html.erb within layouts/application
+  Rendered stocks/result.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 888ms (Views: 27.1ms | ActiveRecord: 0.0ms)
+
+
