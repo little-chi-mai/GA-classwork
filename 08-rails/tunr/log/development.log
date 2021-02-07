@@ -3740,3 +3740,652 @@ Processing by SessionController#new as HTML
 Completed 200 OK in 50ms (Views: 48.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2021-01-21 22:46:40 +1100
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mai-boo/.rvm/gems/ruby-2.7.2/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 135ms (Views: 130.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2021-01-21 22:46:43 +1100
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2021-01-21 22:47:55 +1100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 46ms (Views: 27.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2021-01-21 22:48:21 +1100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+8VPbjqTzY1yyQfDowlXXg7zyzIz6CwDZorKpOvbJ06lEeNAJy5OPe5IzRTFOE7EQDn36O3BBTpFJsk0B/ofbg==", "user"=>{"email"=>"mai3@ga.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up!"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mai3@ga.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?)[0m  [["email", "mai3@ga.com"], ["created_at", "2021-01-21 11:48:21.852894"], ["updated_at", "2021-01-21 11:48:21.852894"], ["password_digest", "$2a$12$ezjkEGTLH8lWqjp5bHnF0e41iuEFsiQsvLgy2ss1iDswBeX7KISmW"]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:11
+Redirected to http://localhost:3000/
+Completed 302 Found in 291ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2021-01-21 22:48:21 +1100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2021-01-22 11:24:13 +1100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mai-boo/.rvm/gems/ruby-2.7.2/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 153ms (Views: 136.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/mixtapes" for ::1 at 2021-01-22 11:24:21 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/mixtapes"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/mixtapes/new" for ::1 at 2021-01-22 11:24:31 +1100
+Processing by MixtapesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering mixtapes/new.html.erb within layouts/application
+  Rendered mixtapes/new.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>New Mixtape</h1>
+    2: 
+    3: <%= form_for @mixtape do |f| %>
+    4:   <%= f.label :title %>
+    5:   <%= f.text_field :title, :placeholder => 'Code Jams' %>
+    6:   <%= f.submit %>
+  
+app/views/mixtapes/new.html.erb:3:in `_app_views_mixtapes_new_html_erb___2083792172433374287_12720'
+Started GET "/mixtapes/new" for ::1 at 2021-01-22 11:26:02 +1100
+Processing by MixtapesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering mixtapes/new.html.erb within layouts/application
+  Rendered mixtapes/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 27ms (Views: 10.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/mixtapes" for ::1 at 2021-01-22 11:26:20 +1100
+Processing by MixtapesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3rnVsp/YxiFd/H6/0U+UB2wLonSwofNw3rUj+gA8nwfY8dereiuIL9Sj3HkdGlsZp6Ov5OjFBYlW9o4W2M8r/g==", "mixtape"=>{"title"=>""}, "commit"=>"Create Mixtape"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mixtapes_controller.rb:7
+  [1m[36mMixtape Create (0.5ms)[0m  [1m[32mINSERT INTO "mixtapes" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", ""], ["created_at", "2021-01-22 00:26:20.938863"], ["updated_at", "2021-01-22 00:26:20.938863"]]
+  ↳ app/controllers/mixtapes_controller.rb:7
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mixtapes_controller.rb:7
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2021-01-22 11:26:20 +1100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mMixtape Load (0.1ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" ORDER BY "mixtapes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/mixtapes/new" for ::1 at 2021-01-22 11:28:31 +1100
+Processing by MixtapesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering mixtapes/new.html.erb within layouts/application
+  Rendered mixtapes/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 19ms (Views: 9.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/mixtapes" for ::1 at 2021-01-22 11:28:45 +1100
+Processing by MixtapesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CSFkJ1XFqXgrS8XIcen3JkhyFR/k8TG0Cddr9II7+d0PaWY+sDbndqIUZw69vDg4g9oYj7yVx02BlMYYWshNJA==", "mixtape"=>{"title"=>"Mai's love songs"}, "commit"=>"Create Mixtape"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mixtapes_controller.rb:7
+  [1m[36mMixtape Create (0.3ms)[0m  [1m[32mINSERT INTO "mixtapes" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Mai's love songs"], ["created_at", "2021-01-22 00:28:45.947954"], ["updated_at", "2021-01-22 00:28:45.947954"]]
+  ↳ app/controllers/mixtapes_controller.rb:7
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mixtapes_controller.rb:7
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mixtapes_controller.rb:8
+  [1m[36mMixtape Update (0.3ms)[0m  [1m[33mUPDATE "mixtapes" SET "user_id" = ?, "updated_at" = ? WHERE "mixtapes"."id" = ?[0m  [["user_id", 9], ["updated_at", "2021-01-22 00:28:45.966050"], ["id", 8]]
+  ↳ app/controllers/mixtapes_controller.rb:8
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mixtapes_controller.rb:8
+Redirected to http://localhost:3000/
+Completed 302 Found in 22ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2021-01-22 11:28:45 +1100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.1ms)
+
+
+  [1m[36mMixtape Load (0.1ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" ORDER BY "mixtapes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMixtape Load (0.4ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" ORDER BY "mixtapes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" ORDER BY "mixtapes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" ORDER BY "mixtapes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+Started GET "/" for ::1 at 2021-01-22 11:31:00 +1100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 17ms (Views: 10.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/mixtapes/new" for ::1 at 2021-01-22 11:31:10 +1100
+Processing by MixtapesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering mixtapes/new.html.erb within layouts/application
+  Rendered mixtapes/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 25ms (Views: 14.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/mixtapes" for ::1 at 2021-01-22 11:31:14 +1100
+Processing by MixtapesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2xaH0VebzX2Xnl8H0WmiLf8LbBVTwP97jlt0oOxS+4DdXoXIsmiDcx7B/cEdPG0zNKNhhQukCYIGGNlMNKFPeQ==", "mixtape"=>{"title"=>"Lala"}, "commit"=>"Create Mixtape"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mixtapes_controller.rb:9
+  [1m[36mMixtape Create (0.3ms)[0m  [1m[32mINSERT INTO "mixtapes" ("user_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["user_id", 9], ["created_at", "2021-01-22 00:31:14.929666"], ["updated_at", "2021-01-22 00:31:14.929666"]]
+  ↳ app/controllers/mixtapes_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mixtapes_controller.rb:9
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 0.8ms)
+
+
+  
+NameError (undefined local variable or method `mixtape' for #<MixtapesController:0x00007f948933d9a0>
+Did you mean?  mixtapes_url):
+  
+app/controllers/mixtapes_controller.rb:9:in `create'
+Started POST "/mixtapes" for ::1 at 2021-01-22 11:32:50 +1100
+Processing by MixtapesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2xaH0VebzX2Xnl8H0WmiLf8LbBVTwP97jlt0oOxS+4DdXoXIsmiDcx7B/cEdPG0zNKNhhQukCYIGGNlMNKFPeQ==", "mixtape"=>{"title"=>"Lala"}, "commit"=>"Create Mixtape"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mixtapes_controller.rb:9
+  [1m[36mMixtape Create (0.2ms)[0m  [1m[32mINSERT INTO "mixtapes" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Lala"], ["user_id", 9], ["created_at", "2021-01-22 00:32:50.585870"], ["updated_at", "2021-01-22 00:32:50.585870"]]
+  ↳ app/controllers/mixtapes_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mixtapes_controller.rb:9
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2021-01-22 11:32:50 +1100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 0.1ms)
+
+
+  [1m[36mMixtape Load (0.1ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" ORDER BY "mixtapes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" ORDER BY "mixtapes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mMixtape Load (0.1ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" ORDER BY "mixtapes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2021-01-22 11:34:17 +1100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 9.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/mixtapes/new" for ::1 at 2021-01-22 11:34:18 +1100
+Processing by MixtapesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering mixtapes/new.html.erb within layouts/application
+  Rendered mixtapes/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 27ms (Views: 15.8ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/login" for ::1 at 2021-01-22 11:34:39 +1100
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ynMsEI5P7uw/OjHkbQ2XvWscu9Q1syRmQZLlJ8U45oDMOy4Ja7yg4rZlkyKhWFijoLS2RG3X0p/J0UjLHctSeQ=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for ::1 at 2021-01-22 11:34:39 +1100
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mixtapes/new" for ::1 at 2021-01-22 11:34:45 +1100
+Processing by MixtapesController#new as HTML
+  Rendering mixtapes/new.html.erb within layouts/application
+  Rendered mixtapes/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mixtapes/new" for ::1 at 2021-01-22 11:39:11 +1100
+Processing by MixtapesController#new as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for ::1 at 2021-01-22 11:39:11 +1100
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mixtapes/new" for ::1 at 2021-01-22 11:39:18 +1100
+Processing by MixtapesController#new as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2021-01-22 11:39:18 +1100
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mixtapes/new" for ::1 at 2021-01-22 11:41:11 +1100
+Processing by MixtapesController#new as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :check_for_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2021-01-22 11:41:11 +1100
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2021-01-22 11:42:01 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w9TbVws05B7GwAMgXQhW1Mpcj2aQW7HotaTfAAtBfCHFnNlO7seqEE+foeaRXZnKAfSC9sg/RxE953Ls07LI2A==", "email"=>"mai3@ga.com", "password"=>"[FILTERED]", "commit"=>"Sign in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mai3@ga.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:7
+Redirected to http://localhost:3000/
+Completed 302 Found in 277ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2021-01-22 11:42:01 +1100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/mixtapes/new" for ::1 at 2021-01-22 11:42:04 +1100
+Processing by MixtapesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering mixtapes/new.html.erb within layouts/application
+  Rendered mixtapes/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 26ms (Views: 14.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/mixtapes/new" for ::1 at 2021-01-22 11:50:50 +1100
+Processing by MixtapesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering mixtapes/new.html.erb within layouts/application
+  Rendered mixtapes/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 20ms (Views: 9.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/new" for ::1 at 2021-01-22 11:50:54 +1100
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for ::1 at 2021-01-22 11:50:57 +1100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Completed 406 Not Acceptable in 16ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionController::UnknownFormat (UsersController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.4.4) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.4.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.4.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.4.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.4.4) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.4.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.4.4) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.4.4) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.4.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.4.4) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.4.4) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.4.4) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.4.4) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.4.4) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.4.4) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.4.4) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.4.4) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.4.4) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.4) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.4) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.4) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users" for ::1 at 2021-01-22 11:51:50 +1100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 16ms (Views: 11.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2021-01-22 11:53:11 +1100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddAdminToUsers (20210122005403)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" ADD "admin" boolean DEFAULT 0[0m
+  ↳ db/migrate/20210122005403_add_admin_to_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210122005403"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/users" for ::1 at 2021-01-22 11:59:23 +1100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mai-boo/.rvm/gems/ruby-2.7.2/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 97ms (Views: 81.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for ::1 at 2021-01-22 12:02:56 +1100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Redirected to http://localhost:3000/
+Filter chain halted as :check_for_admin rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2021-01-22 12:02:56 +1100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for ::1 at 2021-01-22 12:03:22 +1100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Redirected to http://localhost:3000/
+Filter chain halted as :check_for_admin rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2021-01-22 12:03:22 +1100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 7.8ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/login" for ::1 at 2021-01-22 12:03:28 +1100
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rP2G5N1YbYNNnS7zjL4r79jhOy/IzEoWYrHywBOXaDuqtYT9OKsjjcTCjDVA6+TxE0k2v5CovO/q8l8sy2Tcwg=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for ::1 at 2021-01-22 12:03:28 +1100
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2021-01-22 12:03:38 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ehdvdTI3u0b5qktI7cbuMhTR+rEZ4+k/Kr5pNA1E58x8X21s18T1SHD16Y4hkyEs33n3IUGHH8ai/cTY1bdTNQ==", "email"=>"craigsy@ga.co", "password"=>"[FILTERED]", "commit"=>"Sign in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "craigsy@ga.co"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:7
+Redirected to http://localhost:3000/
+Completed 302 Found in 275ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2021-01-22 12:03:38 +1100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for ::1 at 2021-01-22 12:03:46 +1100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Redirected to http://localhost:3000/
+Filter chain halted as :check_for_admin rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2021-01-22 12:03:46 +1100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2021-01-22 12:06:32 +1100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.1ms)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started DELETE "/login" for ::1 at 2021-01-22 15:19:13 +1100
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xnDzq1VUZOfghW4QFVeNU1jzdRMpoKAreuV+kG2UejvAOPGysKcq6WnazNbZAkJNk1t4g3HEVtLyptN8tWfOwg=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Redirected to http://localhost:3000/login
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/login" for ::1 at 2021-01-22 15:19:13 +1100
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2021-01-22 15:19:15 +1100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2021-01-22 15:19:29 +1100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OeaMAkJk+ruxeeChjgT+UfZqHPJojewhrBBYOVz2DRhnMiAsX9l5Cy34KnboNefLuKAgKLakxRiPvFupsNc1OA==", "user"=>{"email"=>"craigsy@ga.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up!"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:17
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "craigsy@ga.co"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:17
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 282ms (Views: 8.4ms | ActiveRecord: 0.2ms)
+
+
