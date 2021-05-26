@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   def create
     @user = User.create user_params # TODO: handle errors
 
-    #Fat models
+    #Fat models, Thin controller
 
     if @user.save
       session[:user_id] = @user.id

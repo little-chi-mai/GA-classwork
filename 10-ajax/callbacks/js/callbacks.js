@@ -1,9 +1,12 @@
+// A callback function is a function PASSED TO another function.
+// The passed function gets called for you, later, at some point in time.
+
 // Javascript is asynchronous.
 
 // Timers: A, C, B
 console.log('A');
 setTimeout(function () {
-  console.log('time has passed');
+  console.log('B: time has passed');
 }, 4000)
 console.log('C');
 
@@ -21,17 +24,22 @@ $(document).on('click', function () {
 })
 console.log('Chico');
 
-// YOU ARE NOT EXPECTED TO UNDERSTAND THIS (yet)
+// // YOU ARE NOT EXPECTED TO UNDERSTAND THIS (yet)
 
-const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 
-// colors.each do |c|
-//   puts c
-// end
+// // colors.each do |c|
+// //   puts c
+// // end
 
-// for (let i = 0; i < colors.length; i++) {
-//   console.log(colors[i]);
-// }
+// // for (let i = 0; i < colors.length; i++) {
+// //   console.log(colors[i]);
+// // }
+
+// ES6
+// colors.forEach(function(c) {
+//   console.log(c);
+// });
 
 const each = function(someArray, callbackFunction) {
   for (let i = 0; i < someArray.length; i++) {
@@ -43,15 +51,15 @@ each(colors, function(c) {
   console.log(c);
 });
 
-each(colors, function (item) {
-  console.log(item.toUpperCase());
-});
+// each(colors, function (item) {
+//   console.log(item.toUpperCase());
+// });
 
 each(['Lan', 'Giap', 'Mai'], function (brother) {
   console.log( brother + ' Nguyen');
 })
 
-// This is now part of ES5.1.
-colors.forEach(function (color) {
-  console.log(color.toUpperCase() + '!!!')
-})
+// // This is now part of ES5.1.
+// colors.forEach(function (color) {
+//   console.log(color.toUpperCase() + '!!!')
+// })

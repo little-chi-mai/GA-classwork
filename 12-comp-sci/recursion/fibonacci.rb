@@ -1,4 +1,5 @@
 # 1 1 2 3 5 8 13
+require 'pry'
 
 def fibonacci_iterative(n)
   a = 1
@@ -28,6 +29,30 @@ end
 ## Bonus homework
 ## Make this faster but still recursive
 ## Option a: memoisation
-## Option bL iterative recursion
 
-fibonacci_recursive(40)
+def fib_memo(n)
+  @fib = @fib || {} # @fib ||= {}
+
+  if @fib[n]
+    @fib[n] #return the value we saved earlier.
+  elsif n ==1 || n == 2
+    1
+  else
+    @fib[n] = fib_memo(n - 1) + fib_memo(n - 2)
+     #memoisation
+  end
+end
+
+## Option b: iterative recursion
+
+def fib(n, a = 1, b = 1)
+  if n == 1 || n == 2
+    b
+  else
+    fib n - 1, b, a+b
+  end
+end
+
+binding.pry
+
+# fibonacci_recursive(40)

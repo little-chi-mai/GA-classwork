@@ -1,3 +1,5 @@
+# Convention over Configuration
+
 require 'sinatra'
 require 'sinatra/reloader'
 require 'pry'
@@ -8,7 +10,7 @@ get '/' do #'root' or home page
 end
 
 get '/result' do 
-  @x = params[:x].to_f
+  @x = params[:x].to_f # @-instance variable - everyone access the site has their own copies
   @y = params[:y].to_f
 
   @result = case params[:operator]

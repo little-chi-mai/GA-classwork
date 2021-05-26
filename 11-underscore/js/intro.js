@@ -1,15 +1,18 @@
+console.log(_.VERSION);
 
 const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 
 // Each loop for arrays
-// eq to forEach
+// eq to forEach (with es5)
 
 _(nums).each(function(item, index, theWholeArray) {
   // console.log(`Item: ${item}; Index: ${index}; The whole array: ${theWholeArray}`);
 })
 
+// or _.each(nums, function(...));
 
-///// each loop for an object
+
+///// each loop for objects
 
 const sales = { Feb: 95, Mar: 105}
 

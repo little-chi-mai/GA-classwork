@@ -1,5 +1,5 @@
 class Bank
-  attr_reader :name, :accounts #getter
+  attr_reader :name, :accounts #getter only
 
   # def accounts
   #   @accounts
@@ -20,6 +20,7 @@ class Bank
 
   def withdraw(name, amount)
       @accounts[name] -= amount unless amount >= @accounts[name]
+      # @accounts[name] -= amount unless amount >= balance(name)
   end
 
   def balance(name)

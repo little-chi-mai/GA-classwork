@@ -14,3 +14,8 @@ nav {
 nav a {
   color: black;
 }
+
+.feature {
+  /* Occupied 100% of the outside container */
+  max-width: 100%;
+}

@@ -3,6 +3,7 @@ require_relative '../bank'
 describe Bank do
   let (:bank) { Bank.new 'TDD bank' }
 
+  # class methods use .
   describe '.new' do
     it 'creates a new bank object' do
       expect(bank).to_not be nil
@@ -12,7 +13,8 @@ describe Bank do
       expect(bank.name).to eq 'TDD bank'
     end
   end
-
+  
+  # instance methods use #
   describe '#create_account' do
     it 'creates an account for a particular user' do
       bank.create_account 'Craigsy', 7

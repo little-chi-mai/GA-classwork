@@ -10,6 +10,9 @@ end
 
 # INDEX
 get '/butterflies' do
+  # db = SQLite3::Database.new 'database.sqlite3'
+  # db.results_as_hash = true
+  # @butterflies = db.execute 'SELECT * FROM butterflies'
   @butterflies = query_db 'SELECT * FROM butterflies'   # fetch the butterflies
   erb :butterflies_index
 end

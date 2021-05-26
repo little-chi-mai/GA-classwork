@@ -1,7 +1,11 @@
-require 'sinatra'
+require 'sinatra'  # starts a server -> listen for requests
 require 'sinatra/reloader'  # from sinatra-contrib
 require 'pry'
 # DSL: Domain Specific Language
+
+get '/' do
+  "Hello world -- this is the home page"
+end
 
 get '/hello' do
   "Hello world from Sinatra - Mai"
@@ -17,12 +21,16 @@ get '/lucky_number' do
   "Here is your lucky number: #{ rand 1..40 }"
 end
 
+get '/uptime' do
+  "The sever uptime is #{`uptime`}"
+end
+
 get '/random_brother' do
   %w( Mai Lan Giap Cuong ).sample
 end
 
 
-# Dynamic URLs
+# Dynamic URLs :placeholder
 get '/fanclub/tegan' do
   "Tegan is a proud member of the Mai's fan club."
 end
@@ -34,7 +42,7 @@ end
 get '/fanclub/:member' do
   "#{params[:member].capitalize} is a proud member of the Mai's fan club."
 end
- 
+
 # Premium Membership
 get "/fanclub/:first/:last" do
   "#{params[:first].capitalize} #{params[:last].upcase} is a premium member of the Mai's fan club."

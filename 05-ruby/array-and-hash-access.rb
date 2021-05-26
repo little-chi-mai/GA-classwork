@@ -101,6 +101,10 @@ p users["Erik"][:favorite_numbers].min
 
 # 1. How would you return an array of Anil's favorite numbers that are also even?
 p users["Anil"][:favorite_numbers].select { |n| n.even? }
+
+p users["Anil"][:favorite_numbers].select &:even? #symbol to proc
+
+
 # 1. How would you return an array of the favorite numbers common to all users?
 # all_fav_numbers = []
 # users.each do |k, v|

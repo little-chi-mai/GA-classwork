@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-class Clickr extends React.Component {
-  constructor() { // A place to do set up
+class Clickr extends Component {
+  constructor() { // A place to do set up (same as ruby def initialize). A method called automatically once
     super();    // You have to call super
     this.state = {
-      clicks: 15    // Put information that will change in state so React can monitor it.
+      clicks: 0    // Put information that will change in state so React can monitor it.
     }
     this._incrementCount = this._incrementCount.bind(this)
   }     // You need this WTF thing

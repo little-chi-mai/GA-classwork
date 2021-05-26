@@ -16,7 +16,9 @@ class Profile extends Component {
 
   _zoomOut() {
     console.log(this)
-    this.setState({height: this.state.height - 10});
+    if (this.state.height > 10) {
+      this.setState({height: this.state.height - 10});
+    }
   }
 
   render() {

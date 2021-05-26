@@ -1,0 +1,2 @@
+# Nmap 7.91 scan initiated Thu Mar  4 15:22:06 2021 as: nmap -Pn -sS -oA scan -p 80 -iR 0 -vvv --open
+# Ports scanned: TCP(1;80) UDP(0;) SCTP(0;) PROTOCOLS(0;)

@@ -3,7 +3,7 @@ CREATE TABLE pets (
   name TEXT,
   breed TEXT,
   age INTEGER,
-  dead BOOLEAN
+  dead BOOLEAN -- actually just an integer: 0 for false, 1 for true
 );
 
 -- optional seed data
