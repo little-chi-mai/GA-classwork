@@ -1,0 +1,23 @@
+%h1.heading.friday HAML DEMO
+
+%p lala
+
+/ this is a comment
+%h2.food= 'hotdogs' * 11
+
+/ Interpolation 
+%h3= "Your lucky number is #{@lucky}"
+
+%div.container
+  %p Indentation allows nesting
+  %p lala %span lalaaa
+
+%label
+  = "Name"
+  %input
+
+%ul
+  - %w (Mai Lan Giap).each do |brother|
+    %li= brother
+
+%p HAML knows where to close a black based on your indentation

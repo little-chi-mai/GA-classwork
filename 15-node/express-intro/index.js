@@ -13,7 +13,7 @@ const PORT = 1337; // Single definition for ease of modification later (readable
 server.get('/', (req, res) => {
   const brothers = 'Groucho Harpo Chico Zeppo Mai'.split(' ');
   const randomBrother = _(brothers).sample();
-  res.render('home.ejs', {brother: randomBrother, lucky: _.random(40)}) // "Instance" variables.
+  res.render('home.ejs', {brother: randomBrother, lucky: _.random(40)}) // "Instance" variables. // assume that you will put this file in views folder
 })
 
 server.get('/groucho', (req, res) => {
