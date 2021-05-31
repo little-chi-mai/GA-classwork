@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Vocab = mongoose.model('Vocab');
 
 exports.listAllWords = (req, res) => {
-    Vocab.find({}, (err, words) => { // find everything
+    Vocab.find({}, (err, words) => { // {}: find everything
         if(err) res.send(err);
         res.json(words);
     }); // find everything
@@ -40,7 +40,8 @@ exports.deleteAWord = (req, res) => {
         {_id: req.params.wordId}, (err) => {
             if (err) res.send(err);
             res.json({
-                message: 'Word deleted'
+                message: 'Word deleted',
+                _id: req.params.wordId
             })
         }
     )
