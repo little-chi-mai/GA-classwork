@@ -1,12 +1,19 @@
 const vocabBuilder = require('../controllers/vocabController');
 
+// RESTful routes
+// GET    /words   :index
+// POST   /words   :create
+// GET    /words/:wordId :show
+// PUT    /words/:wordId :update
+// DELETE /words/:wordId :destroy
+
 module.exports = (app) => {
     app.route('/words')
-        .get(vocabBuilder.list_all_words) // method .list_all_words // index
-        .post(vocabBuilder.create_a_word); // create
+        .get(vocabBuilder.listAllWords) // method .list_all_words // index
+        .post(vocabBuilder.createAWord); // create
     
     app.route('/words/:wordId')
-        .get(vocabBuilder.read_a_word)      // show
-        .put(vocabBuilder.update_a_word)    // update
-        .delete(vocabBuilder.delete_a_word); // destroy
+        .get(vocabBuilder.readAWord)      // show
+        .put(vocabBuilder.updateAWord)    // update
+        .delete(vocabBuilder.deleteAWord); // destroy
 }

@@ -18,4 +18,4 @@ const VocabSchema = new Schema(
     { collection: 'vocab' } // name of the collection or db, (table name)
 );
 
-module.exports = mongoose.model('Vocab', VocabSchema);
+module.exports = mongoose.model('Vocab', VocabSchema); // Vocab: model's name
