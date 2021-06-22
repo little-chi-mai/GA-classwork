@@ -102,7 +102,32 @@ const axios = require('axios');
 // })
 
 const numberFact = async () => {
-  const result = await axios.get('http://numbersapi.com/random/trivia');
-  console.log('Number trivia:', result.data);
+  // try {
+    const result = await axios.get('http://numbersapi.com/random/triviaaa');
+    console.log('Number trivia:', result.data);
+  // } catch(e) {
+  //   console.error(e);
+  // }
+  
 }
 numberFact();
+
+
+// callbacks
+// promises: .then()
+// await/async: an evolution of Promises
+
+axios.get('site-a.com').then((d) => {
+  axios.get('site-b.com').then((d) => {
+    axios.get('site-c.com').then((d) => {
+      console.log(d);
+    })
+  })
+})
+
+const thing = async () => {
+  const dataA = await axios.get('site-a.com');
+  const dataB = await axios.get('site-b.com');
+  const dataC = await axios.get('site-c.com');
+  console.log(dataC);
+}

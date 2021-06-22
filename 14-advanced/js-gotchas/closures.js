@@ -1,9 +1,11 @@
+// closures: why?
 // let id = 0; // global: bad
 // const nextID = function() {
 //   return id++; //Post increment.
 // }
 
-// Higher Order Function:
+// closures: demo
+// Higher Order Function: function that is returned from another function
 
 const helloMaker = () => {
   const greeting = 'Hello'; // greeting persists through a closure
@@ -16,8 +18,9 @@ const helloMaker = () => {
 // const returnedFunction = helloMaker();
 // returnedFunction();
 //
-// console.log(greeting);
+// console.log(greeting); // undefined
 
+// closures: solution
 const nextIDMaker = function() {
   let id = 0;             // greeting persists through a closure
   return function() {
